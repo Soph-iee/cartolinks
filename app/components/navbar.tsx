@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import NavIcons from "./data/navicons";
-import Navitems from "./components/navitems";
-import Navbuttons from "./components/navbuttons";
+import NavIcons from "../data/navicons";
+import Navitems from "./navitems";
+import Navbuttons from "./navbuttons";
 
 const Navbar = () => {
   return (

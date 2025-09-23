@@ -4,7 +4,7 @@ import {
   FaTowerBroadcast,
   FaWandMagicSparkles,
 } from "react-icons/fa6";
-import type { NavIcon } from "../type";
+import type { NavIcon } from "../types/type";
 const NavIcons: NavIcon[] = [
   { item: "home", icon: FaHome, id: 1 },
   { item: "image", icon: FaImage, id: 2 },
