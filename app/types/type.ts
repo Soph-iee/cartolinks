@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+import { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 export type NavIcon = {
@@ -13,4 +15,20 @@ export type Tooltype = {
   description: string;
   icon: IconType;
   bgColor: string;
+};
+
+export type ImagesType = {
+  id: number;
+  main: string;
+  heading: string;
+  description: string;
+  Leftimg: StaticImageData;
+  Rightimg: StaticImageData;
+  rightHeading:string
+};
+
+export type ImageContainerProps = {
+  Images: ImagesType[];
+  activeImage: number;
+  setActiveImage: Dispatch<SetStateAction<number>>;
 };
