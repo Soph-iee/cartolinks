@@ -1,24 +1,21 @@
-import React from "react";
+"use client";
 import Tools from "../data/tools";
-// import { FaArrowDown } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
 import ToolCard from "./toolCard";
+import ToggleBtn from "./toggleBtn";
+import { useState } from "react";
 
 const Toolsection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleTools = showAll ? Tools : Tools.slice(0, Tools.length / 2);
   return (
-    <ul>
+    <ul className="mt-4">
       <header className="flex items-center justify-between">
         <h2 className="text-xl   text-gray-900"> Generate</h2>
-        <button className="flex  items-center text-blue-500 gap-1">
-          Show all
-          <span>
-            <IoIosArrowDown />
-          </span>
-        </button>
+        <ToggleBtn showAll={showAll} setShowAll={setShowAll} />
       </header>
-      <div className="  grid grid-cols-1 gap-6 text-xs  md:grid-cols-3 lg:grid-cols-4"> 
+      <div className="  grid grid-cols-1 gap-6 text-xs  md:grid-cols-3 lg:grid-cols-4">
         {Tools &&
-          Tools.map((tool) => {
+          visibleTools.map((tool) => {
             return (
               <li key={tool.id}>
                 <ToolCard tool={tool} />

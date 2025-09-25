@@ -7,9 +7,11 @@ import NavIcons from "../data/navicons";
 import Navitems from "./navitems";
 import Navbuttons from "./navbuttons";
 import logo from "../../public/logo.png";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Navbar = () => {
   const [activeNavBtn, setActiveNavBtn] = useState("home");
+  const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="flex items-center relative lg:static w-full justify-between mb-4">
@@ -32,7 +34,35 @@ const Navbar = () => {
             alt="Picture of the author"
           />
         </div>
-        <p>Blessing</p>
+        <p
+          className="flex items-center gap-1 relative cursor-pointer"
+          onClick={() => {
+            setToggle(!toggle);
+          }}
+        >
+          Blessing
+          {toggle ? (
+            <span>
+              <IoIosArrowUp className="text-xs" />
+            </span>
+          ) : (
+            <span>
+              <IoIosArrowDown className="text-xs" />
+            </span>
+          )}
+          <span className="absolute inset-y-6 -inset-x-0  ">
+            {toggle ? (
+              <button
+                className="capitalize text-md border-b 
+             border-gray-100 rounded-sm  py-1 "
+              >
+                logout
+              </button>
+            ) : (
+              ""
+            )}
+          </span>
+        </p>
       </section>
       <section className=" flex flex-col lg:flex-row gap-3 mb-3 lg:mb-0 lg:p-2 lg:bg-gray-50 shadow-sm lg:rounded-lg ">
         {NavIcons &&
@@ -49,7 +79,10 @@ const Navbar = () => {
       </section>
       <div className="bg-gray-700  lg:self-end lg:bg-transparent absolute w-1/2  h-screen top-0 left-0 p-4 flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between ">
         <section className="nav-buttons">
-          <Navbuttons activeNavBtn={activeNavBtn} setActiveNavBtn={setActiveNavBtn} />
+          <Navbuttons
+            activeNavBtn={activeNavBtn}
+            setActiveNavBtn={setActiveNavBtn}
+          />
         </section>
       </div>
     </nav>
