@@ -3,11 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import NavIcons from "../data/navicons";
-import Navitems from "./navitems";
-import Navbuttons from "./navbuttons";
 import logo from "../../public/logo.png";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ThemeToggle from "../ThemeToggle";
 import { IoClose, IoMenu } from "react-icons/io5";
 import DesktopNavbar from "./DesktopNavbar";
@@ -16,7 +12,7 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   const [activeNavBtn, setActiveNavBtn] = useState("home");
   const [toggle, setToggle] = useState(false);
-  const [mobileNav, setMobileNav] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
 
   return (
     <>

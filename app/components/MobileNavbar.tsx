@@ -14,7 +14,7 @@ const MobileNavbar = ({
   setActiveNavBtn,
 }: DeviceNavbarProps) => {
   return (
-    <nav className="flex flex-col  w-full  h-screen z-50 bg-gray-100 absolute overflow-hidden">
+    <nav className="flex flex-col  w-full  h-screen z-50 bg-gray-100 dark:bg-gray-950 absolute overflow-hidden lg:hidden">
       <section className="logo-section space-x-4 lg:flex items-center hidden">
         <Link href="/">
           <Image
@@ -77,8 +77,8 @@ const MobileNavbar = ({
             );
           })}
       </section>
-      <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between bg-green-500 font-bold lg:font-normal">
-        <section className="nav-buttons bg-blue-500">
+      <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between  font-bold lg:font-normal">
+        <section className="nav-buttons ">
           <Navbuttons
             activeNavBtn={activeNavBtn}
             setActiveNavBtn={setActiveNavBtn}

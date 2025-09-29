@@ -15,7 +15,7 @@ const DesktopNavbar = ({
   setToggle,
 }: DeviceNavbarProps) => {
   return (
-    <nav className="hidden lg:flex lg:flex-row lg:items-center relative lg:static w-full justify-between mb-4">
+    <nav className="hidden lg:flex lg:flex-row lg:items-center lg:static w-full justify-between">
       <section className="logo-section space-x-4 lg:flex items-center hidden">
         <Link href="/">
           <Image
@@ -23,7 +23,7 @@ const DesktopNavbar = ({
             alt="krea_logo"
             width={225}
             height={225}
-            className="w-20 h-auto"
+            className="w-10 h-auto"
           />
         </Link>
         <div className="user">
@@ -65,7 +65,7 @@ const DesktopNavbar = ({
           </span>
         </p>
       </section>
-      <section className=" flex flex-col lg:flex-row gap-3 mb-3 lg:mb-0 lg:p-2 lg:bg-gray-50   text-center dark:lg:bg-gray-950 shadow-sm lg:rounded-lg">
+      <section className=" flex flex-col lg:flex-row gap-3 mb-3 lg:mb-0 lg:p-2 lg:bg-gray-50   text-center dark:lg:bg-gray-950 shadow-sm lg:rounded-lg ">
         {NavIcons &&
           NavIcons.map((icon) => {
             return (
@@ -78,8 +78,8 @@ const DesktopNavbar = ({
             );
           })}
       </section>
-      <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between bg-green-500 font-bold lg:font-normal">
-        <section className="nav-buttons bg-blue-500">
+      <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between font-bold lg:font-normal">
+        <section className="nav-buttons">
           <Navbuttons
             activeNavBtn={activeNavBtn}
             setActiveNavBtn={setActiveNavBtn}

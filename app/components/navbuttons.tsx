@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { Dispatch, SetStateAction } from "react";
 import { FaBell, FaHeadphones } from "react-icons/fa";
 import { FaPhotoFilm } from "react-icons/fa6";
@@ -20,7 +19,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
   // const { theme, setTheme } = useTheme();
 
   return (
-    <menu className="flex flex-col gap-2 lg:flex-row items-center bg-gray-50 dark:bg-gray-900 p-2 ">
+    <menu className="lg:flex lg:gap-2 lg:flex-row items-center dark:bg-gray-900 p-2">
       {Buttons.map((btn, i) => {
         return (
           <button
@@ -39,7 +38,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
           </button>
         );
       })}
-      <div className="hidden lg:static">
+      <div>
         <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
       </div>
     </menu>
