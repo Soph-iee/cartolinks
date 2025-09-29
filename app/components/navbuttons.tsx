@@ -38,7 +38,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
           </button>
         );
       })}
-      <div className="hidden lg:static">
+      <div className="hidden lg:flex">
         <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
       </div>
     </menu>
