@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KreaAI - UI Clone
 
-## Getting Started
+A **UI clone** of KREAAI, built with **Next.js**, **TailwindCSS**, and **TypeScript**.  
+The project demonstrates responsive design, dark mode implementation, and smooth page interactions, replicating the user interface of the original app.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Tech Stack
+- [Next.js](https://nextjs.org/) – React framework for SSR and routing  
+- [TailwindCSS](https://tailwindcss.com/) – Utility-first CSS framework  
+- [TypeScript](https://www.typescriptlang.org/) – Type safety and scalability  
+
+---
+
+## ✨ Features
+- 🌙 **Dark Mode Toggle** – theme switching between light and dark  
+- 📱 **Responsive Design** – optimized for both mobile and desktop  
+- ⚡ **Interactive UI** – smooth page transitions and user interactions  
+- 🎨 **Pixel-perfect Styling** – closely follows the original app design  
+
+---
+
+## 🛠️ Installation & Setup
+
+Clone the repository:
+git clone https://github.com/Soph-iee/cartolinks.git
+cd project-name
+
+Install dependencies:
+npm install
+
+Run the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🌍 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is deployed with Vercel
+.
+👉 Live Demo: [https://cartolinks-delta.vercel.app/]
 
-## Learn More
+📌 Notes
+This project is a personal internship task focused on UI development.
+No backend or database integration is included.
+🎯 Learning Outcomes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Through this project, I gained hands-on experience with:
+1.Structuring a project with Next.js and understanding its routing system
+2.Styling with TailwindCSS for fast and responsive UI development
+3.Implementing dark mode with next themes- conditional rendering and theme toggling
+4.Writing clean, type-safe code using TypeScript
+5.Managing responsive layouts for both mobile and desktop views
+6.Deploying a Next.js project seamlessly on Vercel
