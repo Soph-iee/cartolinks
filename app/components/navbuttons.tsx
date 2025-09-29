@@ -38,7 +38,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
           </button>
         );
       })}
-      <div>
+      <div className="static">
         <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
       </div>
     </menu>

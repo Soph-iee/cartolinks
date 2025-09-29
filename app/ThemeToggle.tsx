@@ -18,7 +18,7 @@ const ThemeToggle = ({
     return null;
   }
   return (
-    <button 
+    <button  className=""
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
         setActiveNavBtn("");
