@@ -7,7 +7,7 @@ const toolDetails = async ({
   params: Promise<{ tool: string }>;
 }) => {
   const { tool } = await params;
-  console.log(tool);
+  
   const product = Tools.filter((item) => item.id === Number(tool));
   return (
     <div>

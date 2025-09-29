@@ -19,7 +19,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
   // const { theme, setTheme } = useTheme();
 
   return (
-    <menu className="lg:flex lg:gap-2 lg:flex-row items-center dark:bg-gray-900 p-2">
+    <menu className="flex  gap-3 lg:gap-2 lg:flex-row items-center dark:bg-gray-950 lg:p-2 flex-col ">
       {Buttons.map((btn, i) => {
         return (
           <button
@@ -38,7 +38,7 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
           </button>
         );
       })}
-      <div className="static">
+      <div className="hidden lg:static">
         <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
       </div>
     </menu>

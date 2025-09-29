@@ -12,11 +12,11 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   const [activeNavBtn, setActiveNavBtn] = useState("home");
   const [toggle, setToggle] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
+  const [openNavBar, setOpenNavBar] = useState(false);
 
   return (
     <>
-      <section className=" mobile-navbar logo-section space-x-4 flex items-center lg:hidden justify-between pb-4">
+      <section className=" mobile-navbar logo-section space-x-4 flex items-center lg:hidden justify-between px-8 bg-white fixed z-50 top-0 w-full dark:bg-gray-950 py-8">
         <Link href="/">
           <Image
             src={logo}
@@ -55,27 +55,28 @@ const Navbar = () => {
             </span>
           </p>
           <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
-          {mobileNav ? (
+          {openNavBar ? (
             <IoClose
               onClick={() => {
-                setMobileNav(!mobileNav);
+                setOpenNavBar(false);
               }}
             />
           ) : (
             <IoMenu
               onClick={() => {
-                setMobileNav(!mobileNav);
+                setOpenNavBar(true);
               }}
             />
           )}
         </div>
       </section>
-      {mobileNav ? (
+      {openNavBar ? (
         <MobileNavbar
           toggle={toggle}
           setToggle={setToggle}
           setActiveNavBtn={setActiveNavBtn}
           activeNavBtn={activeNavBtn}
+          openNavBar={openNavBar}
         />
       ) : (
         <DesktopNavbar
