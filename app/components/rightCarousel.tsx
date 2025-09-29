@@ -28,10 +28,10 @@ const RightCarousel = ({
                 {activeImage === i ? (
                   <section className=" p-4 rounded-xl absolute inset-0 bottom-6 flex items-center bg-gradient-to-t from-black/70 via-black/20 to-transparent text-white">
                     <span className="uppercase self-start">try this now</span>
-                    <h1 className="text-6xl font-semibold text-center capitalize text-gray-100 tracking-tighter">
+                    <h1 className="lg:text-6xl text-4xl font-semibold text-center capitalize text-gray-100 tracking-tighter">
                       {item.rightHeading}
                     </h1>
-                    <div className="description flex items-center justify-between absolute px-2 bottom-8">
+                    <div className="description flex items-center justify-between absolute px-2 lg:bottom-8 bottom-2 lg:text-base text-sm">
                       <div>
                         <h3 className="text-xl capitalize">{item.heading}</h3>
                         <p>{item.description}</p>

@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import NavIcons from "../data/navicons";
@@ -8,14 +7,14 @@ import logo from "../../public/logo.png";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { DeviceNavbarProps } from "../types/type";
 
-const DesktopNavbar = ({
+const MobileNavbar = ({
+  setToggle,
+  toggle,
   activeNavBtn,
   setActiveNavBtn,
-  toggle,
-  setToggle,
 }: DeviceNavbarProps) => {
   return (
-    <nav className="hidden lg:flex lg:flex-row lg:items-center relative lg:static w-full justify-between mb-4">
+    <nav className="flex flex-col  w-full  h-screen z-50 bg-gray-100 absolute overflow-hidden">
       <section className="logo-section space-x-4 lg:flex items-center hidden">
         <Link href="/">
           <Image
@@ -90,4 +89,4 @@ const DesktopNavbar = ({
   );
 };
 
-export default DesktopNavbar;
+export default MobileNavbar;

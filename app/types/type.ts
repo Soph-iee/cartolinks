@@ -32,3 +32,9 @@ export type ImageContainerProps = {
   activeImage: number;
   setActiveImage: Dispatch<SetStateAction<number>>;
 };
+export type DeviceNavbarProps = {
+  activeNavBtn: string;
+  setActiveNavBtn: Dispatch<SetStateAction<string>>;
+  toggle: boolean;
+  setToggle: Dispatch<SetStateAction<boolean>>;
+};

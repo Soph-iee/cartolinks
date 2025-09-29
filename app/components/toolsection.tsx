@@ -10,7 +10,7 @@ const Toolsection = () => {
   return (
     <ul
       className={`mt-4 transition-all duration-900 ease-in-out  ${
-        showAll ? "max-h-50" : "max-h-25"
+        showAll ? " lg:max-h-50" : "lg:max-h-25"
       } overflow-hidden`}
     >
       <header className="flex items-center justify-between">

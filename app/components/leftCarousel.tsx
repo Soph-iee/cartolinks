@@ -23,15 +23,15 @@ const LeftContainer = ({
                 {activeImage === i ? (
                   <section className=" p-4 rounded-xl absolute inset-0 bottom-6 flex items-center bg-gradient-to-t from-black/70 via-black/20 to-transparent text-white">
                     <span className="uppercase self-start">try this now</span>
-                    <h1 className="text-6xl font-bold text-center uppercase">
+                    <h1 className="lg:text-6xl text-4xl font-bold text-center uppercase">
                       {item.main}
                     </h1>
-                    <div className="description flex items-center justify-between absolute px-2 bottom-8">
+                    <div className="description flex items-center justify-between absolute px-2 lg:bottom-8 bottom-4 lg:text-base text-xs ">
                       <div>
-                        <h3 className="text-xl capitalize">{item.heading}</h3>
+                        <h3 className="lg:text-xl capitalize">{item.heading}</h3>
                         <p>{item.description}</p>
                       </div>
-                      <button className=" py-1.5 px-3 bg-white text-black rounded-3xl text-nowrap font-medium">
+                      <button className=" lg:py-1.5 lg:px-3 px-1.5 py-1 bg-white text-black rounded-3xl text-nowrap font-medium">
                         Try {item.main}
                       </button>
                     </div>
