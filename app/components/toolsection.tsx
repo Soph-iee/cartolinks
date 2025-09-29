@@ -8,9 +8,16 @@ const Toolsection = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleTools = showAll ? Tools : Tools.slice(0, Tools.length / 2);
   return (
-    <ul className="mt-4">
+    <ul
+      className={`mt-4 transition-all duration-900 ease-in-out  ${
+        showAll ? "max-h-50" : "max-h-25"
+      } overflow-hidden`}
+    >
       <header className="flex items-center justify-between">
-        <h2 className="text-xl   text-gray-900"> Generate</h2>
+        <h2 className="text-xl   text-gray-900  dark:text-gray-50">
+          {" "}
+          Generate
+        </h2>
         <ToggleBtn showAll={showAll} setShowAll={setShowAll} />
       </header>
       <div className="  grid grid-cols-1 gap-6 text-xs  md:grid-cols-3 lg:grid-cols-4">

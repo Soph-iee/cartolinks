@@ -1,14 +1,15 @@
 "use client";
 
+
 import React, { Dispatch, SetStateAction } from "react";
-import { FaBell, FaHeadphones, FaSun } from "react-icons/fa";
+import { FaBell, FaHeadphones } from "react-icons/fa";
 import { FaPhotoFilm } from "react-icons/fa6";
+import ThemeToggle from "../ThemeToggle";
 
 const Buttons = [
   { icon: FaPhotoFilm, name: "Gallery" },
   { icon: FaHeadphones, name: "Support" },
   { icon: FaBell, name: "notifications" },
-  { icon: FaSun, name: "theme" },
 ];
 
 type NavButtonsProps = {
@@ -16,13 +17,17 @@ type NavButtonsProps = {
   setActiveNavBtn: Dispatch<SetStateAction<string>>;
 };
 const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
+  // const { theme, setTheme } = useTheme();
+
   return (
-    <menu className="flex flex-col gap-2 lg:flex-row items-center bg-gray-50 p-2 ">
+    <menu className="flex flex-col gap-2 lg:flex-row items-center bg-gray-50 dark:bg-gray-900 p-2 ">
       {Buttons.map((btn, i) => {
         return (
           <button
             className={`flex items-center justify-center gap-1 ${
-              activeNavBtn === btn.name ? "bg-white shadow-sm" : "bg-gray-50"
+              activeNavBtn === btn.name
+                ? "bg-white  dark:bg-gray-800 dark:text-gray-200 shadow-md"
+                : "bg-gray-50  dark:bg-gray-900"
             }  p-1 lg:p-2 rounded-sm w-full lg:w-auto`}
             key={i}
             onClick={() => {
@@ -34,6 +39,9 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
           </button>
         );
       })}
+      <div className="hidden lg:static">
+        <ThemeToggle setActiveNavBtn={setActiveNavBtn} />
+      </div>
     </menu>
   );
 };

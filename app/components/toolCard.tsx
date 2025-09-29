@@ -24,7 +24,7 @@ const ToolCard = ({ tool }: { tool: Tooltype }) => {
         </p>
         <p>{tool.description}</p>
       </div>
-      <button className="bg-gray-100 px-3 py-1 rounded-xl capitalize font-medium cursor-pointer">
+      <button className= " dark:bg-gray-800 bg-gray-100 px-3 py-1 rounded-xl capitalize font-medium cursor-pointer">
         open
       </button>
     </Link>

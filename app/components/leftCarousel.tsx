@@ -1,20 +1,21 @@
-import Image from "next/image";
 import { ImageContainerProps } from "../types/type";
+import CarouselImage from "./CarouselImage";
 
-const ImageContainer = ({
+const LeftContainer = ({
   Images,
   activeImage,
   setActiveImage,
 }: ImageContainerProps) => {
   return (
-<div className="active-image grid grid-cols-1 w-full rounded-2xl relative">
-      <Image
-        className="object-cover rounded-2xl w-full h-full"
-        src={Images[activeImage].Leftimg}
-        alt="random-image"
-      />
+    <div className="active-image grid grid-cols-1 w-full rounded-2xl relative">
+      <div className="flex overflow-hidden">
+        {Images &&
+          Images.map((item, i) => (
+            <CarouselImage key={i} item={item.Leftimg} activeImage={activeImage} />
+          ))}
+      </div>
 
-      <div className="flex  gap-2 justify-end" >
+      <div className="flex  gap-2 justify-end">
         {Images &&
           Images.map((item, i) => {
             return (
@@ -43,8 +44,8 @@ const ImageContainer = ({
                   onClick={() => {
                     setActiveImage(i);
                   }}
-                  className={`w-2 h-2 rounded-full ${
-                    activeImage === i ? "bg-gray-500" : "bg-black"
+                  className={`w-1.5 h-1.5 rounded-full cursor-pointer hover:scale-110 ${
+                    activeImage === i ? "  dark:bg-gray-50 bg-gray-500" : " dark:bg-gray-500 bg-black"
                   }`}
                 ></button>
               </div>
@@ -55,4 +56,4 @@ const ImageContainer = ({
   );
 };
 
-export default ImageContainer;
+export default LeftContainer;
