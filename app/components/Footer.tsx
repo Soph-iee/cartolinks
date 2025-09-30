@@ -1,24 +1,35 @@
+import Link from "next/link";
 import React from "react";
+
+const footerLinks = [
+  {
+    name: "legal",
+    href: "/legal",
+  },
+  {
+    name: "pricing",
+    href: "/pricing",
+  },
+];
 
 const Footer = () => {
   return (
-    <footer className="footer bottom-0 w-full pt-8 flex justify-between ">
+    <footer className="footer bottom-0 w-full pt-8 flex  flex-col items-center justify-between lg:flex-row">
       <h5 className="text-xl font-semibold dark:text-white">Gallery</h5>
-      <div>
-        <button
-          type="button"
-          className="text-black dark:text-white bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-1.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-800 dark:focus:ring-gray-700 dark:border-gray-700"
-        >
-          Legal
-        </button>
-
-        <button
-          type="button"
-          className="text-black dark:text-white bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-1.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-800 dark:focus:ring-gray-700 dark:border-gray-700"
-        >
-          Pricing
-        </button>
-      </div>
+      <nav
+        aria-label="footer navigation"
+        className="flex gap-2 flex-col lg:flex-row"
+      >
+        {footerLinks?.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            className="text-black dark:text-white bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-xl text-sm px-3 py-1.5  dark:bg-gray-800 dark:hover:bg-gray-800 dark:focus:ring-gray-700 dark:border-gray-700"
+          >
+            {link.name}
+          </Link>
+        ))}
+      </nav>
     </footer>
   );
 };

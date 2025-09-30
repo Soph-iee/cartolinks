@@ -25,8 +25,8 @@ const DesktopNavbar = ({
           <Image
             src={logo}
             alt="krea_logo"
-            width={225}
-            height={225}
+            width={40}
+            height={40}
             priority
             className="w-10 h-auto"
           />
@@ -34,14 +34,16 @@ const DesktopNavbar = ({
         <div className="user">
           <Image
             src="/user.jpg"
-            width={20}
-            height={20}
+            width={28}
+            height={28}
             className="rounded-full border border-gray-600"
             alt="user avatar"
           />
         </div>
         <button
           className="flex items-center gap-1 relative cursor-pointer"
+          aria-haspopup="true"
+          aria-expanded={toggle}
           onClick={() => setToggle((prev) => !prev)}
         >
           <span> Blessing</span>
