@@ -15,14 +15,19 @@ const DesktopNavbar = ({
   setToggle,
 }: DeviceNavbarProps) => {
   return (
-    <nav className="hidden lg:flex lg:flex-row lg:items-center lg:static w-full justify-between">
-      <section className="logo-section space-x-4 lg:flex items-center hidden">
-        <Link href="/">
+    <nav
+      className="hidden lg:flex flex-row items-center w-full justify-between py-4 px-8 z-50 fixed bg-white  dark:bg-gray-950 top-0 "
+      role="navigation"
+      aria-label="Desktop navigation"
+    >
+      <section className="logo-section space-x-4 flex items-center ">
+        <Link href="/" aria-label="Go to homepage">
           <Image
             src={logo}
             alt="krea_logo"
             width={225}
             height={225}
+            priority
             className="w-10 h-auto"
           />
         </Link>
@@ -32,69 +37,59 @@ const DesktopNavbar = ({
             width={20}
             height={20}
             className="rounded-full border border-gray-600"
-            alt="Picture of the author"
+            alt="user avatar"
           />
         </div>
-        <p
+        <button
           className="flex items-center gap-1 relative cursor-pointer"
-          onClick={() => {
-            setToggle(!toggle);
-          }}
+          onClick={() => setToggle((prev) => !prev)}
         >
-          Blessing
+          <span> Blessing</span>
+
           {toggle ? (
-            <span>
-              <IoIosArrowDown className="text-xs" />
-            </span>
+            <IoIosArrowDown className="text-xs" aria-hidden="true" />
           ) : (
-            <span>
-              <IoIosArrowUp className="text-xs" />
-            </span>
+            <IoIosArrowUp className="text-xs" aria-hidden="true" />
           )}
-          <span className="absolute inset-y-6 -inset-x-0  ">
-            {toggle ? (
-              <button
-                className="capitalize text-md border-b 
-             border-gray-100  dark:border-gray-950  rounded-sm  py-1 "
-              >
-                logout
-              </button>
-            ) : (
-              ""
-            )}
-          </span>
-        </p>
+          {toggle && (
+            <ul
+              className="absolute inset-y-6  bg-white dark:bg-gray-900 rounded shadow-lg"
+              role="menu"
+            >
+              <li role="menuitem">
+                <button className="w-full px-3 py-1 capitalize text-md  hover:bg-gray-200  bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900">
+                  logout
+                </button>
+              </li>
+            </ul>
+          )}
+        </button>
       </section>
-      <section className=" flex flex-col lg:flex-row gap-3 mb-3 lg:mb-0 lg:p-2 lg:bg-gray-50   text-center dark:lg:bg-gray-950 shadow-sm lg:rounded-lg ">
-        {NavIcons &&
-          NavIcons.map((icon) => {
-            return (
-              <Navitems
-                icon={icon}
-                key={icon.id}
-                activeNavBtn={activeNavBtn}
-                setActiveNavBtn={setActiveNavBtn}
-              />
-            );
-          })}
-      </section>
-      <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between font-bold lg:font-normal">
-        <section className="nav-buttons flex items-center space-x-2">
-          <Navbuttons
+      <section className=" flex gap-3 p-2 bg-gray-50   text-center dark:bg-gray-950 shadow-sm rounded-lg ">
+        {NavIcons?.map((icon) => (
+          <Navitems
+            key={icon.id}
+            icon={icon}
             activeNavBtn={activeNavBtn}
             setActiveNavBtn={setActiveNavBtn}
           />
-          <div className="user hidden lg:block ">
-            <Image
-              src="/user.jpg"
-              width={20}
-              height={20}
-              className="rounded-full border border-gray-600"
-              alt="Picture of the author"
-            />
-          </div>
-        </section>
-      </div>
+        ))}
+      </section>
+
+      <section className="nav-buttons flex items-center space-x-2">
+        <Navbuttons
+          activeNavBtn={activeNavBtn}
+          setActiveNavBtn={setActiveNavBtn}
+        />
+
+        <Image
+          src="/user.jpg"
+          width={20}
+          height={20}
+          className="rounded-full border border-gray-600"
+          alt="user avatar"
+        />
+      </section>
     </nav>
   );
 };

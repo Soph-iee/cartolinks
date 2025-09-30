@@ -15,7 +15,7 @@ const Navbar = () => {
   const [openNavBar, setOpenNavBar] = useState(false);
 
   return (
-    <>
+    <section className="flex justify-center">
       <section className=" mobile-navbar logo-section space-x-4 flex items-center lg:hidden justify-between px-8 bg-white fixed z-50 top-0 w-full dark:bg-gray-950 py-8">
         <Link href="/">
           <Image
@@ -86,7 +86,7 @@ const Navbar = () => {
           activeNavBtn={activeNavBtn}
         />
       )}
-    </>
+    </section>
   );
 };
 
