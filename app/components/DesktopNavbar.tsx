@@ -79,11 +79,20 @@ const DesktopNavbar = ({
           })}
       </section>
       <div className="lg:self-end lg:bg-transparent w-full lg:p-4  flex flex-col lg:flex-row lg:w-auto lg:h-auto lg:static lg:items-center lg:gap-12 justify-between font-bold lg:font-normal">
-        <section className="nav-buttons">
+        <section className="nav-buttons flex items-center space-x-2">
           <Navbuttons
             activeNavBtn={activeNavBtn}
             setActiveNavBtn={setActiveNavBtn}
           />
+          <div className="user hidden lg:block ">
+            <Image
+              src="/user.jpg"
+              width={20}
+              height={20}
+              className="rounded-full border border-gray-600"
+              alt="Picture of the author"
+            />
+          </div>
         </section>
       </div>
     </nav>

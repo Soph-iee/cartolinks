@@ -1,4 +1,5 @@
 import Carousel from "./components/carousel";
+import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
 import Toolsection from "./components/toolsection";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Carousel />
       <Toolsection />
+      <Footer/>
     </div>
   );
 }
