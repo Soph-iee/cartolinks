@@ -1,7 +1,7 @@
 import React from "react";
 
 const Legal = () => {
-  return <div className="flex items-center justify-center font-bold capitalize">Legal </div>;
+  return <div className="font-bold capitalize my-10 mx-auto">Legal </div>;
 };
 
 export default Legal;
