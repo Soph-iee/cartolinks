@@ -15,7 +15,7 @@ const ToolCard = ({ tool }: { tool: Tooltype }) => {
         <p className="capitalize font-medium">
           {tool.name}
           {tool.isNew ? (
-            <button className="capitalize  bg-blue-400 px-1.5 ml-2 py-0.5 text-white rounded-xl font-medium">
+            <button className="capitalize  bg-blue-400 px-3 ml-2 py-1.5 text-white rounded-md font-medium">
               new
             </button>
           ) : (
@@ -24,7 +24,7 @@ const ToolCard = ({ tool }: { tool: Tooltype }) => {
         </p>
         <p>{tool.description}</p>
       </div>
-      <button className= " dark:bg-gray-800 bg-gray-100 px-3 py-1 rounded-xl capitalize font-medium cursor-pointer">
+      <button className= " dark:bg-gray-800 bg-gray-100 px-3 py-1.5 rounded-md capitalize font-medium cursor-pointer">
         open 
       </button>
     </Link>

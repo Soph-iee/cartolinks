@@ -20,7 +20,7 @@ const Toolsection = () => {
         </h2>
         <ToggleBtn showAll={showAll} setShowAll={setShowAll} />
       </header>
-      <div className="  grid grid-cols-1 gap-6 text-xs  md:grid-cols-3 lg:grid-cols-4">
+      <div className="  grid grid-cols-1 gap-6 text-sm md:grid-cols-3 lg:grid-cols-4">
         {Tools &&
           visibleTools.map((tool) => {
             return (

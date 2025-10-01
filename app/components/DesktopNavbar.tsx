@@ -59,9 +59,12 @@ const DesktopNavbar = ({
               role="menu"
             >
               <li role="menuitem">
-                <button className="w-full px-3 py-1 capitalize text-md  hover:bg-gray-200  bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900">
+                <Link
+                  href="/"
+                  className="w-full px-3 py-1 capitalize text-md  hover:bg-gray-200  bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900"
+                >
                   logout
-                </button>
+                </Link>
               </li>
             </ul>
           )}
