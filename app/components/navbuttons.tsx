@@ -27,14 +27,14 @@ const Navbuttons = ({ activeNavBtn, setActiveNavBtn }: NavButtonsProps) => {
               activeNavBtn === btn.name
                 ? "bg-white  dark:bg-gray-800 dark:text-gray-200 shadow-md"
                 : "bg-gray-50  dark:bg-gray-900"
-            }  p-2 rounded-sm w-full lg:w-auto`}
+            }  lg:p-2 p-3 rounded-sm w-full lg:w-auto`}
             key={i}
             onClick={() => {
               setActiveNavBtn(btn.name);
             }}
           >
             {<btn.icon />}
-            <span>{i <= 1 ? btn.name : ""}</span>
+            <span>{i <= 1 && btn.name }</span>
           </button>
         );
       })}

@@ -13,10 +13,10 @@ const Navitems = ({ icon, activeNavBtn, setActiveNavBtn }: NavItemsProps) => {
     <div className="nav-item">
       <Link
         href="/"
-        className={`flex gap-2 p-3 rounded-md lg:block bg-gray-50 dark:bg-gray-900 justify-center lg:justify-normal ${
+        className={`flex gap-2 p-3 rounded-md lg:block bg-gray-50  justify-center lg:justify-normal ${
           activeNavBtn === icon.item
-            ? "lg:bg-white dark:lg:bg-gray-200 shadow-md text-gray-900"
-            : "lg:bg-transparent"
+            ? "bg-white dark:bg-gray-700 shadow-md text-gray-900 dark:text-gray-200"
+            : "dark:bg-gray-900 bg-gray-50"
         } transition-all duration-300 ease-in`}
         onClick={() => {
           setActiveNavBtn(icon.item);
