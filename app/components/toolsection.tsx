@@ -10,7 +10,7 @@ const Toolsection = () => {
   return (
     <ul
       className={`mt-4 transition-all duration-900 ease-in-out  ${
-        showAll ? " lg:max-h-50" : "lg:max-h-25"
+        showAll ? " lg:max-h-60" : "lg:max-h-30"
       } overflow-hidden`}
     >
       <header className="flex items-center justify-between">
@@ -20,7 +20,7 @@ const Toolsection = () => {
         </h2>
         <ToggleBtn showAll={showAll} setShowAll={setShowAll} />
       </header>
-      <div className="  grid grid-cols-1 gap-6 text-sm md:grid-cols-3 lg:grid-cols-4">
+      <div className="  grid grid-cols-1 gap-6 text-sm md:grid-cols-2 lg:grid-cols-4">
         {Tools &&
           visibleTools.map((tool) => {
             return (

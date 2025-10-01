@@ -4,7 +4,6 @@ import NavIcons from "../data/navicons";
 import Navitems from "./navitems";
 import Navbuttons from "./navbuttons";
 import logo from "../../public/logo.png";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { DeviceNavbarProps } from "../types/type";
 
 const MobileNavbar = ({
@@ -31,7 +30,6 @@ const MobileNavbar = ({
         <Link href="/" aria-label="Go to homepage">
           <Image
             src={logo}
-
             alt="Krea logo"
             width={80}
             height={80}
